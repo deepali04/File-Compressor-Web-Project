@@ -2,6 +2,8 @@
 
 The Lempel–Ziv–Welch (LZW) algorithm is a lossless data compression algorithm. It is an adaptive compression algorithm that does not assume prior knowledge of the input data distribution.. It is simple to implement and has the potential for very high throughput in hardware implementations.
 
+The project is a web project in which file upload and download has been done using RESTful APIs.
+
 ## Pseudocode
 ~~~
 MAX_TABLE_SIZE=2(bit_length) //bit_length is number of encoding bits
@@ -17,4 +19,9 @@ If TABLE.size < MAX_TABLE_SIZE: // if table is not full
 add STRING + SYMBOL to TABLE // STRING + SYMBOL now has a code
 STRING = SYMBOL
 output the code for STRING
+~~~
+
+## Data Structure
+~~~
+HashMap data structure is used to implement the algorithm and it contains the ASCII characters as KEY along with its ASCII value as VALUE for encoding.
 ~~~

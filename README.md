@@ -25,3 +25,9 @@ output the code for STRING
 ~~~
 HashMap data structure is used to implement the algorithm and it contains the ASCII characters as KEY along with its ASCII value as VALUE for encoding.
 ~~~
+
+## Application of LZW
+~~~
+1. GIF and TIFF files
+2. Adobe Acrobat Softwaare
+~~~

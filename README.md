@@ -3,10 +3,12 @@
 The Lempel–Ziv–Welch (LZW) algorithm is a lossless data compression algorithm. It is an adaptive compression algorithm that does not assume prior knowledge of the input data distribution.. It is simple to implement and has the potential for very high throughput in hardware implementations.
 
 The project is a web project in which file upload and download has been done using RESTful APIs.
-Tools Requires:
+Tools Required:
+~~~
 Java : 1.8 and above
-Postman : API testing
+Postman : for API testing
 IDE: VS code, STS, Eclipse
+~~~
 
 ## Pseudocode
 ~~~
@@ -26,9 +28,7 @@ output the code for STRING
 ~~~
 
 ## Data Structure
-~~~
 HashMap data structure is used to implement the algorithm and it contains the ASCII characters as KEY along with its ASCII value as VALUE for encoding.
-~~~
 
 ## Application of LZW
 ~~~

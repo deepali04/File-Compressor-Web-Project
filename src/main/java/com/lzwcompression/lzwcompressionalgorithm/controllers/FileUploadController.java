@@ -36,11 +36,11 @@ public class FileUploadController {
                 //ServletUriComponentsBuilder.fromCurrentContextPath() localhost:8080
                 // then /files the /filename
                 //then this url will be sent
- 
             //} 
 
-    } catch (Exception e) { 
+    }catch (Exception e) { 
         e.printStackTrace();
     }
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Something went wrong");    }    
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Something went wrong"); 
+    }    
 }

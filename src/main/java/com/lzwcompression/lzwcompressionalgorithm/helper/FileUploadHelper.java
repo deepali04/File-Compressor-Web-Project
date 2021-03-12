@@ -20,8 +20,6 @@ public class FileUploadHelper {
     @Autowired
     private Compression compression;
 
-    //public final String UPLOAD_DIR="E:\\Deepali's Data\\Projects\\lzwcompressionalgorithm\\src\\main\\resources\\static\\files" ;
-
     public final String UPLOAD_DIR= new ClassPathResource("/static/files").getFile().getAbsolutePath();
 
     public FileUploadHelper() throws IOException{
@@ -31,8 +29,6 @@ public class FileUploadHelper {
     public boolean uploadFile(MultipartFile multipartFile){
         boolean status= false;
         try {
-      
-        //String outputfilename=compression.compressFile(multipartFile.getOriginalFilename());
 
         Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename() ),StandardCopyOption.REPLACE_EXISTING);
         System.out.println(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename());

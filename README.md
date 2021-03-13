@@ -29,8 +29,13 @@ STRING = SYMBOL
 output the code for STRING
 ~~~
 
-## Data Structure
+## About Algorithm:
 HashMap data structure is used to implement the algorithm and it contains the ASCII characters as KEY along with its ASCII value as VALUE for encoding.
+
+1. BufferedReader and BufferedWriter for reading and writing to files.
+2. For encoding, Compressing.java file is used. It will generate compressed (LZW) file.
+3. For decoding compressed file, Decompressing.java is used. It will generate decoded text file, whose contents will be same as the initial input file.
+4. The compression file is created using charset UTF_16BE and stored in 16-bit format.
 
 ## Application of LZW
 ~~~

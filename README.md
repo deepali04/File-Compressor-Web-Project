@@ -23,8 +23,8 @@ if STRING + SYMBOL is in TABLE:
 STRING = STRING + SYMBOL
 else:
 output the code for STRING
-If TABLE.size < MAX_TABLE_SIZE: // if table is not full
-add STRING + SYMBOL to TABLE // STRING + SYMBOL now has a code
+If TABLE.size < MAX_TABLE_SIZE:
+add STRING + SYMBOL to TABLE
 STRING = SYMBOL
 output the code for STRING
 ~~~

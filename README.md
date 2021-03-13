@@ -9,13 +9,13 @@ Tools Required:
 ~~~
 Java : 1.8 and above
 Postman : for API testing
-IDE: VS code, STS, Eclipse
+IDE: VS code/ STS/ Eclipse
 ~~~
 
 ## Pseudocode
 ~~~
-MAX_TABLE_SIZE=2(bit_length) //bit_length is number of encoding bits
-initialize TABLE[0 to 255] = code for individual characters
+MAX_TABLE_SIZE=2(bit_length)
+initialize TABLE[0 to 255]
 STRING = null
 while there are still input symbols:
 SYMBOL = get input symbol

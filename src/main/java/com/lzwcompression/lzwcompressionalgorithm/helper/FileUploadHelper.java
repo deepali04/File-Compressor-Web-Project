@@ -7,7 +7,6 @@ import java.nio.file.Files;
 //import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-
 import com.lzwcompression.lzwcompressionalgorithm.compression.Compression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -28,21 +27,17 @@ public class FileUploadHelper {
 
     public boolean uploadFile(MultipartFile multipartFile){
         boolean status= false;
-        try {
-
-        Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename() ),StandardCopyOption.REPLACE_EXISTING);
-        System.out.println(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename());
-        String outputfilename=compression.compressFile(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename());
-        System.out.println(outputfilename);
-        Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR +"\\"+ outputfilename), StandardCopyOption.REPLACE_EXISTING);
-        status =true;
-            
-        } catch (Exception e) {
+        try{
+            Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename() ),StandardCopyOption.REPLACE_EXISTING);
+            System.out.println(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename());
+            String outputfilename=compression.compressFile(UPLOAD_DIR +"\\"+ multipartFile.getOriginalFilename());
+            System.out.println(outputfilename);
+            Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR +"\\"+ outputfilename), StandardCopyOption.REPLACE_EXISTING);
+            status =true;
+        }catch (Exception e) {
             e.printStackTrace();
         }
         return status;
-        
-
-    }
+   }
     
 }

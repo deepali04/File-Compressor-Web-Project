@@ -20,7 +20,7 @@ STRING = null
 while there are still input symbols:
 SYMBOL = get input symbol
 if STRING + SYMBOL is in TABLE:
-STRING = STRING + SYMBOL
+  STRING = STRING + SYMBOL
 else:
 output the code for STRING
 If TABLE.size < MAX_TABLE_SIZE:
